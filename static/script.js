@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const productList = document.getElementById('productList');
             productList.innerHTML = products.map(product => `
                 <div class="product-item">
-                    <div class="product-name">${product.name}</div>
-                    <div class="product-price">$${product.price.toFixed(2)}</div>
-                    ${product.description ? `<div class="product-description">${product.description}</div>` : ''}
+                    <div class="product-name">Product Name: ${product.name}</div>
+                    <div class="product-price">Product Price: $${product.price.toFixed(2)}</div>
+                    ${product.description ? `<div class="product-description">Product Description: ${product.description}</div>` : ''}
                     <div class="product-date"><i class="fas fa-clock"></i> ${formatLocalTime(product.created_at)}</div>
                 </div>
             `).join('');
